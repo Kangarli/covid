@@ -5,7 +5,6 @@ import { fetchData } from './api/';
 import styles from './App.module.css';
 import Button from 'react'
 
-import stayathome from './images/stayathome.png';
 
 class App extends React.Component {
   state = {
@@ -30,8 +29,6 @@ class App extends React.Component {
 
     return (
       <div className={styles.container}>
-        <img className={styles.image} src={stayathome} alt="COVID-19" />
-        <a href={"https://kangarlidev.web.app"} style={{color: 'black', textDecoration: 'none', fontSize: '20px'}}>go back</a>
         <Cards data={data} />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Chart data={data} country={country} /> 
